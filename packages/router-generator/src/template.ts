@@ -59,7 +59,7 @@ export function getTargetTemplate(target: Config['target']): TargetTemplate {
               '%%tsrImports%%',
               '\n\n',
               '%%tsrExportStart%%{\n component: RootComponent\n }%%tsrExportEnd%%\n\n',
-              'function RootComponent() { return (<React.Fragment><div>Hello "%%tsrPath%%"!</div><Outlet /></React.Fragment>) };\n',
+              'function RootComponent() { return (<><div>Hello "%%tsrPath%%"!</div><Outlet /></>) };\n',
             ].join(''),
           imports: {
             tsrImports: () =>
